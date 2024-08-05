@@ -8,4 +8,4 @@ class Administrator(Base):
     resource_id = Column(Integer)
     ingredient = Column(String(50))
     amount = Column(DECIMAL)
-    unit = Column(String(50))
+    unit = Column(String(51))
