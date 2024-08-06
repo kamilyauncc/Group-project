@@ -11,3 +11,4 @@ class Order(Base):
     description = Column(String(51), nullable=True)
     order_date = Column(DateTime, default=datetime.utcnow)
     order_details = relationship("OrderDetail", back_populates="order")
+    payments = relationship("Payment", back_populates="order")

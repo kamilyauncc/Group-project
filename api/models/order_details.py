@@ -9,7 +9,8 @@ class OrderDetail(Base):
     id = Column(Integer, primary_key=True, index=True)
     order_id = Column(Integer, ForeignKey('orders.id'))
     menu_item_id = Column(Integer, nullable=False)
+    sandwich_id = Column(Integer, ForeignKey('sandwiches.id'), nullable=False)
     quantity = Column(Integer, nullable=False)
 
     order = relationship("Order", back_populates="order_details")
-
+    sandwich = relationship("Sandwich", back_populates="order_details")
